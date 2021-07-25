@@ -1,20 +1,23 @@
 package banking;
 
-public class Person {
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode
+public class Person extends AccountHolder {
 	private String firstName;
 	private String lastName;
 
 	public Person(String firstName, String lastName, int idNumber) {
-		// complete the function
+		super(idNumber);
+		this.firstName = firstName;
+		this.lastName = lastName;
 	}
 
 	public String getFirstName() {
-		// complete the function
-        return null;
+        return firstName;
 	}
 
 	public String getLastName() {
-		// complete the function
-        return null;
+        return lastName;
 	}
 }
